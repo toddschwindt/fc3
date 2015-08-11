@@ -1,0 +1,58 @@
+<ion-side-menus enable-menu-with-back-views="enableMenuWithBack" >
+  <ion-side-menu-content drag-content="dragContent">
+    <ion-nav-bar class="bar-stable {{site[0].theme}}">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button ng-hide="hideNav" class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" ng-show="allowSideMenu" is-enabled="allowSideMenu">
+    <ion-header-bar ng-hide="true" class="bar-positive">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list class="{{site[0].theme}}" style="padding: 10px;">
+          <img style="width: 100%;" data-ng-src="data:image/png;base64,{{site[0].menulogo}}" />
+        <ion-item menu-close href="#/app/search">
+          <i class="icon ion-navicon-round"></i> Event Directory
+        </ion-item>
+        <ion-item menu-close href="#/app/event/{{site[0].siteid}}">
+          <i class="icon ion-home"></i> Home
+        </ion-item>
+        <ion-item menu-close href="#/app/dates">
+          <i class="icon ion-document-text"></i> Agenda
+        </ion-item>
+        <ion-item menu-close href="#/app/attendees">
+          <i class="icon ion-android-people"></i> Attendees
+        </ion-item>
+        <ion-item menu-close href="#/app/speakers">
+          <i class="icon ion-android-microphone"></i> Speakers
+        </ion-item>
+        <ion-item menu-close href="#/app/surveys">
+          <i class="icon ion-stats-bars"></i> Surveys
+        </ion-item>
+        <ion-item menu-close href="#/app/polls">
+          <i class="icon ion-thumbsup"></i> Live Polls
+        </ion-item>
+        <ion-item menu-close href="#/app/sponsors">
+          <i class="icon ion-trophy"></i> Sponsors
+        </ion-item>
+        <ion-item menu-close href="#/app/chat">
+         <i class="icon ion-android-chat"></i> Chat
+        </ion-item>
+        <ion-item menu-close href="#/app/questions">
+          <i class="icon ion-chatbubble-working"></i> FAQ
+        </ion-item>
+        <ion-item menu-close ng-click="login()">
+          <i class="icon ion-log-in"></i> Login
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

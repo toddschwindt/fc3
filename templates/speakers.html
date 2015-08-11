@@ -1,0 +1,9 @@
+﻿<ion-view view-title="Speakers">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="speaker in speakers" href="#/app/speaker/{{speaker.speakerid}}">
+        <img alt="Profile Picture" data-ng-src="data:image/png;base64,{{speaker.photo}}" />
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

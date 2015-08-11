@@ -1,0 +1,9 @@
+﻿<ion-view view-title="Sponsors">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="sponsor in sponsors" href="#/app/sponsor/{{sponsor.sponsorid}}">
+        <img alt="Profile Picture" data-ng-src="data:image/png;base64,{{sponsor.photo}}" />
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

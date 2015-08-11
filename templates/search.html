@@ -1,0 +1,13 @@
+
+
+<ion-view view-title="Event Directory">
+  <ion-content ng-controller="searchController">
+    <ion-list>
+      <ion-item collection-repeat="site in sites | filter:filters.search | orderBy:'startdate'" href="#/app/event/{{site.siteid}}">
+        <img style="display: none; background-color: gray;" ng-src="data:image/png;base64,{{site.bannerlogo}}" />{{site.start}}<br /><i class="icon ion-android-unlock"></i> {{site.description | limitTo : 30 : 0}}
+      </ion-item>
+    </ion-list>
+  <ion-infinite-scroll  ng-if="canWeLoadMoreContent()" on-infinite="loadMore()" distance="1%">
+  </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
